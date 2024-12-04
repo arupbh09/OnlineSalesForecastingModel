@@ -3,7 +3,7 @@
 ### In this project, we used data collected from UCI repository, this data represents sales transactions for an online wholesale retailer from 2011 to 2012
 ### For this project, we explored the dataset using visualization, and then prepared the data for forecasting sales dollars and quantity
 ### We visualized the variation of sales dollars and quantity with time (date) and decomposed time series data to extract trend, seasonality and noise
-### We developed two optimal RNN models to forecast sales dollars (revenues) and sales quantity, by tuning the following hyperparameters to have the lowest RMSE
+### We developed two LSTM models to forecast sales dollars (revenues) and sales quantity, by tuning the following hyperparameters to have the lowest RMSE
 #### Look back period - 7, 30, 90 days
 #### Number of units - 32,64, 128, 256
 #### Batch size - 16,32,64
@@ -17,11 +17,13 @@
 #### Sales revenue overall had a positive trend from 2011 to 2012
 #### Sales revenue seasonality was pronouced every 30 days (ACF plots), seasonality diminished if we extended over 90 days
 #### Sales revenue did not have seasonality over a weekly duration
-### Optimal RNN model for sales revenue forecasting
+### LSTM model for sales revenue forecasting with optimal hyperparmaters
+#### Sales forecasting accuracy achieved : 63.5%
 #### Look back period of 30 days
 #### Model with first and second layer of 128 units and dense layer with 1 unit
 #### Batch size of 64
-### Optimal RNN model for sales volume (quantity) forecasting
+### LSTM model for sales volume (quantity) forecasting - with optimal hyperparameters
+#### Sales quantity forecasting accuracy achieved : 64%
 #### Look back period of 30 days
 #### Model with first and second layer of 32 units and dense layer with 1 unit
 #### Batch size of 64
